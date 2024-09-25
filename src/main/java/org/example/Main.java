@@ -1,6 +1,6 @@
 package org.example;
 
-public class Calculator {
+public class Main {
 
     // Method to calculate factorial
     public static int factorial(int num) {
