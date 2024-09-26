@@ -6,9 +6,10 @@ pipeline{
     stages{
         stage("Stage 1 : Git Clone") {
             steps {
-                git "https://github.com/shouryap1/Calculator_SPE_MiniProject.git"
+                sh 'git clone https://github.com/shouryap1/Caluclator_SPE_MiniProject.git'
             }
         }
+
 
 
         stage("Stage 2 : Maven Build"){
