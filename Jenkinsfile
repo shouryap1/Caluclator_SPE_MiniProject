@@ -35,7 +35,7 @@ pipeline{
         stage("Stage 5 : Clean Unwanted Docker Images"){
             steps{
                 sh "docker container prune -f"
-                sh "d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ocker image prune -a -f"
+                sh "docker image prune -a -f"
             }
         }
 
