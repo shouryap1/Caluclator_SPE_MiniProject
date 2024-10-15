@@ -7,7 +7,7 @@ pipeline{
         stage("Stage 1 : Git Clone") {
             steps {
 //                 sh 'ls'
-                   sh 'git clone https://github.com/shouryap1/Caluclator_SPE_MiniProject.git'
+                   git "https://github.com/shouryap1/Caluclator_SPE_MiniProject.git"
             }
         }
 
@@ -35,7 +35,7 @@ pipeline{
         stage("Stage 5 : Clean Unwanted Docker Images"){
             steps{
                 sh "docker container prune -f"
-                sh "docker image prune -a -f"
+                sh "d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ocker image prune -a -f"
             }
         }
 
