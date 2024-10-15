@@ -41,7 +41,7 @@ public class Main {
         System.out.println("-------- Welcome to Calculator Program - SPE ---------");
         System.out.println(" ");
         System.out.println("-------- Please Enter the Operation: ------------");
-        System.out.println("1 -> Factorial");
+        System.out.println("1 -> Factorial    ");
         System.out.println("2 -> Square Root");
         System.out.println("3 -> Natural Logarithm");
         System.out.println("4 -> Power Function");
