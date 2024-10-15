@@ -13,6 +13,3 @@
 
     - name: Run the container
       shell: docker create -it --name Calculator shouryap1/calculator
-
-    - name: Run
-      shell: docker start -a -i Calculator
