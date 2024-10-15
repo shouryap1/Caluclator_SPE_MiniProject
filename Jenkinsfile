@@ -7,7 +7,7 @@ pipeline{
         stage("Stage 1 : Git Clone") {
             steps {
 //                 sh 'ls'
-                   sh 'git clone "https://github.com/shouryap1/Caluclator_SPE_MiniProject.git"''
+                   sh 'git clone https://github.com/shouryap1/Caluclator_SPE_MiniProject.git'
             }
         }
 
