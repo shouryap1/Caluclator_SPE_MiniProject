@@ -47,57 +47,82 @@ public class Main {
         System.out.println("4 -> Power Function");
         System.out.println("5 -> Exit the Calculator");
 
-        System.out.println(" ---------------------");
-        int choice = sc.nextInt();
+        System.out.println(" ----X---------X------X--");
 
-        switch (choice) {
-            case 1:
-                System.out.print("Enter integer whose factorial you want to calculate: ");
-                int num = sc.nextInt();
-                int factorialResult = factorial(num);
-                if (factorialResult == -1) {
-                    System.out.println("Please Enter valid non-negative Integer Input");
-                } else {
-                    System.out.println("Factorial of " + num + " is: " + factorialResult);
-                }
-                break;
+        if (sc.hasNextInt()) {
+            int choice = sc.nextInt();
 
-            case 2:
-                System.out.print("Enter number whose square root you want to calculate: ");
-                double sqrtNum = sc.nextDouble();
-                double sqrtResult = sqrt(sqrtNum);
-                if (sqrtResult == -1) {
-                    System.out.println("Please Enter valid Input >= 0");
-                } else {
-                    System.out.println("Square root of " + sqrtNum + " is: " + sqrtResult);
-                }
-                break;
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter integer whose factorial you want to calculate: ");
+                    if (sc.hasNextInt()) {
+                        int num = sc.nextInt();
+                        int factorialResult = factorial(num);
+                        if (factorialResult == -1) {
+                            System.out.println("Please Enter a valid non-negative Integer Input");
+                        } else {
+                            System.out.println("Factorial of " + num + " is: " + factorialResult);
+                        }
+                    } else {
+                        System.out.println("Invalid input. Please enter a valid integer.");
+                    }
+                    break;
 
-            case 3:
-                System.out.print("Enter a number for natural log: ");
-                double logNum = sc.nextDouble();
-                double logResult = log(logNum);
-                if (logResult == -1) {
-                    System.out.println("Please Enter a valid number greater than 0");
-                } else {
-                    System.out.println("Natural log of " + logNum + " is: " + logResult);
-                }
-                break;
+                case 2:
+                    System.out.print("Enter number whose square root you want to calculate: ");
+                    if (sc.hasNextDouble()) {
+                        double sqrtNum = sc.nextDouble();
+                        double sqrtResult = sqrt(sqrtNum);
+                        if (sqrtResult == -1) {
+                            System.out.println("Please Enter valid Input >= 0");
+                        } else {
+                            System.out.println("Square root of " + sqrtNum + " is: " + sqrtResult);
+                        }
+                    } else {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                    }
+                    break;
 
-            case 4:
-                System.out.print("Enter the base (x) and the exponent (b) for power function (x^b): ");
-                double base = sc.nextDouble();
-                double exponent = sc.nextDouble();
-                double powerResult = pow(base, exponent);
-                System.out.println(base + " raised to the power of " + exponent + " is: " + powerResult);
-                break;
+                case 3:
+                    System.out.print("Enter a number for natural log: ");
+                    if (sc.hasNextDouble()) {
+                        double logNum = sc.nextDouble();
+                        double logResult = log(logNum);
+                        if (logResult == -1) {
+                            System.out.println("Please Enter a valid number greater than 0");
+                        } else {
+                            System.out.println("Natural log of " + logNum + " is: " + logResult);
+                        }
+                    } else {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                    }
+                    break;
 
-            case 5:
-                System.out.println("Exiting the calculator");
-                break;
+                case 4:
+                    System.out.print("Enter the base (x) and the exponent (b) for power function (x^b): ");
+                    if (sc.hasNextDouble()) {
+                        double base = sc.nextDouble();
+                        if (sc.hasNextDouble()) {
+                            double exponent = sc.nextDouble();
+                            double powerResult = pow(base, exponent);
+                            System.out.println(base + " raised to the power of " + exponent + " is: " + powerResult);
+                        } else {
+                            System.out.println("Invalid input. Please enter a valid exponent.");
+                        }
+                    } else {
+                        System.out.println("Invalid input. Please enter a valid base.");
+                    }
+                    break;
 
-            default:
-                System.out.println("Invalid operation choice. Please try again.");
+                case 5:
+                    System.out.println("Exiting the calculator");
+                    break;
+
+                default:
+                    System.out.println("Invalid operation choice. Please try again.");
+            }
+        } else {
+            System.out.println("Invalid input. Please enter a valid operation choice.");
         }
 
         sc.close();

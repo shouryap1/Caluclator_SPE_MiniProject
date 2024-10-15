@@ -6,7 +6,8 @@ pipeline{
     stages{
         stage("Stage 1 : Git Clone") {
             steps {
-                sh 'ls'
+//                 sh 'ls'
+                    git clone "https://github.com/shouryap1/Caluclator_SPE_MiniProject.git"
             }
         }
 
