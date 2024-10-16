@@ -39,7 +39,6 @@ public class Main {
         java.util.Scanner sc = new java.util.Scanner(System.in);
 
         System.out.println("-------- Welcome to Calculator Program - SPE ---------");
-        System.out.println(" XX");
         System.out.println("-------- Please Enter the Operation: ------------");
         System.out.println("1 -> Factorial    ");
         System.out.println("2 -> Square Root");
